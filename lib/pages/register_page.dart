@@ -1,30 +1,21 @@
-import 'package:flutter/material.dart';
-import 'package:restaurant_app/components/my_button.dart';
-import 'package:restaurant_app/components/my_textfield.dart';
-import 'package:restaurant_app/pages/home_page.dart';
+import "package:flutter/material.dart";
+import "package:restaurant_app/components/my_button.dart";
+import "package:restaurant_app/components/my_textfield.dart";
 
-class LoginPage extends StatefulWidget {
+class RegisterPage extends StatefulWidget {
   final void Function()? onTap;
 
-  const LoginPage({super.key, required this.onTap});
+  const RegisterPage({super.key, required this.onTap});
 
   @override
-  State<LoginPage> createState() => _LoginPageState();
+  State<RegisterPage> createState() => _RegisterPageState();
 }
 
-class _LoginPageState extends State<LoginPage> {
+class _RegisterPageState extends State<RegisterPage> {
   final TextEditingController emailController = TextEditingController();
   final TextEditingController passwordController = TextEditingController();
-
-//login method
-  void login() {
-    Navigator.push(
-      context,
-      MaterialPageRoute(
-        builder: (context) => const HomePage(),
-      ),
-    );
-  }
+  final TextEditingController confirmPasswordController =
+      TextEditingController();
 
   @override
   Widget build(BuildContext context) {
@@ -42,7 +33,7 @@ class _LoginPageState extends State<LoginPage> {
             const SizedBox(height: 25),
 
             Text(
-              "Livraison de nourriture",
+              "Créer un compte",
               style: TextStyle(
                   fontSize: 16,
                   color: Theme.of(context).colorScheme.inversePrimary),
@@ -68,16 +59,24 @@ class _LoginPageState extends State<LoginPage> {
 
             const SizedBox(height: 10),
 
-            // Sign in button
-            MyButton(onTap: login, text: "Se connecter"),
+            MyTextField(
+              controller: confirmPasswordController,
+              hintText: "Confirmer le mot de passe",
+              obscureText: true,
+            ),
 
             const SizedBox(height: 10),
 
-            // s'inscrire link
+            // Sign in button
+            MyButton(onTap: () {}, text: "S'inscrire"),
+
+            const SizedBox(height: 10),
+
+            // Se connecter si deja un compte
             Row(
               children: [
                 Text(
-                  "Pas encore membre ?",
+                  "Deja un compte ?",
                   style: TextStyle(
                       color: Theme.of(context).colorScheme.inversePrimary),
                 ),
@@ -85,7 +84,7 @@ class _LoginPageState extends State<LoginPage> {
                 GestureDetector(
                   onTap: widget.onTap,
                   child: Text(
-                    "Rejoignez-nous",
+                    "Se connecter",
                     style: TextStyle(
                         color: Theme.of(context).colorScheme.inversePrimary,
                         fontWeight: FontWeight.bold),
