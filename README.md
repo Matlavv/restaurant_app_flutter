@@ -41,8 +41,14 @@ flutter run
 ## Dark mode
 ![dark mode](https://firebasestorage.googleapis.com/v0/b/restaurant-c1447.appspot.com/o/image_2024-06-21_162136635.png?alt=media&token=de1f3ea8-bce2-470a-a692-9f11959eb1e5)
 
-## List of food & add them to cart
+## List of food 
 ![list of food](https://firebasestorage.googleapis.com/v0/b/restaurant-c1447.appspot.com/o/image_2024-06-21_162248382.png?alt=media&token=b931110e-c27e-4ba3-a9de-1f63b734b54c)
+
+## Food details
+![food details](https://firebasestorage.googleapis.com/v0/b/restaurant-c1447.appspot.com/o/image_2024-06-21_163945483.png?alt=media&token=afddda32-bc79-4bd6-a779-a67dbb808c1e)
+
+## Cart
+[!cart](https://firebasestorage.googleapis.com/v0/b/restaurant-c1447.appspot.com/o/image_2024-06-21_164011660.png?alt=media&token=6d44cb8a-cf51-40cd-99f7-96932171aed4)
 
 ## Payment screen
 ![Payment screen](https://firebasestorage.googleapis.com/v0/b/restaurant-c1447.appspot.com/o/image_2024-06-21_162340541.png?alt=media&token=c9c0fa47-1eac-430e-9870-2c5ac205081c)
