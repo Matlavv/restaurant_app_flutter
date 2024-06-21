@@ -31,6 +31,7 @@
    cd your-repo
    flutter pub get
 ```
+```
 
 2. **Run the project**
 ```sh
