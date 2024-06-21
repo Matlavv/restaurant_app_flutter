@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_credit_card/flutter_credit_card.dart';
+import 'package:provider/provider.dart';
 import 'package:restaurant_app/components/my_button.dart';
+import 'package:restaurant_app/models/restaurant.dart';
 import 'package:restaurant_app/pages/home_page.dart';
+import 'package:restaurant_app/services/database/firestore.dart';
 
 class PaymentPage extends StatefulWidget {
   const PaymentPage({super.key});
@@ -19,8 +22,7 @@ class _PaymentPageState extends State<PaymentPage> {
   bool isCvvFocused = false;
 
   // pay method
-
-  void userTappedPay() {
+  void userTappedPay() async {
     if (formKey.currentState!.validate()) {
       showDialog(
           context: context,
@@ -44,13 +46,25 @@ class _PaymentPageState extends State<PaymentPage> {
 
                     // approve button
                     TextButton(
-                        onPressed: () => {
-                              Navigator.pop(context),
-                              Navigator.push(
-                                  context,
-                                  MaterialPageRoute(
-                                      builder: (context) => const HomePage()))
-                            },
+                        onPressed: () async {
+                          Navigator.pop(context);
+
+                          // Save order to Firestore
+                          final firestoreService = FirestoreService();
+                          await firestoreService
+                              .saveOrderToDatabase(DateTime.now());
+
+                          // Clear cart (if needed)
+                          final restaurant =
+                              Provider.of<Restaurant>(context, listen: false);
+                          restaurant.clearCart();
+
+                          // Navigate to HomePage
+                          Navigator.pushReplacement(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => const HomePage()));
+                        },
                         child: const Text("Valider"))
                   ]));
     }
