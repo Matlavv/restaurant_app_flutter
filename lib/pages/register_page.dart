@@ -1,6 +1,9 @@
+// ignore_for_file: use_build_context_synchronously
+
 import "package:flutter/material.dart";
 import "package:restaurant_app/components/my_button.dart";
 import "package:restaurant_app/components/my_textfield.dart";
+import "package:restaurant_app/services/auth/auth_service.dart";
 
 class RegisterPage extends StatefulWidget {
   final void Function()? onTap;
@@ -16,6 +19,26 @@ class _RegisterPageState extends State<RegisterPage> {
   final TextEditingController passwordController = TextEditingController();
   final TextEditingController confirmPasswordController =
       TextEditingController();
+
+  void register() async {
+    final authService = AuthService();
+
+    if (passwordController.text == confirmPasswordController.text) {
+      try {
+        await authService.signUpWithEmailAndPassword(
+            emailController.text, passwordController.text);
+      } catch (e) {
+        showDialog(
+            context: context,
+            builder: (context) => AlertDialog(title: Text(e.toString())));
+      }
+    } else {
+      showDialog(
+          context: context,
+          builder: (context) => const AlertDialog(
+              title: Text("Les mots de passe ne correspondent pas")));
+    }
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -68,12 +91,13 @@ class _RegisterPageState extends State<RegisterPage> {
             const SizedBox(height: 10),
 
             // Sign in button
-            MyButton(onTap: () {}, text: "S'inscrire"),
+            MyButton(onTap: register, text: "S'inscrire"),
 
             const SizedBox(height: 10),
 
             // Se connecter si deja un compte
             Row(
+              mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Text(
                   "Deja un compte ?",
