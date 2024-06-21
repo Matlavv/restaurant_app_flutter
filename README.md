@@ -1,16 +1,15 @@
-# restaurant_app
+# Flutter project to get food delivery
 
-A new Flutter project.
+## Firebase
+### Authentification with Firebase Authentication
+### Store reservations in Firestore Database
 
-## Getting Started
 
-This project is a starting point for a Flutter application.
+## Dark mode
+![dark mode](https://firebasestorage.googleapis.com/v0/b/restaurant-c1447.appspot.com/o/image_2024-06-21_162136635.png?alt=media&token=de1f3ea8-bce2-470a-a692-9f11959eb1e5)
 
-A few resources to get you started if this is your first Flutter project:
+## List of food & add them to cart
+![list of food](https://firebasestorage.googleapis.com/v0/b/restaurant-c1447.appspot.com/o/image_2024-06-21_162248382.png?alt=media&token=b931110e-c27e-4ba3-a9de-1f63b734b54c)
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## Payment screen
+![Payment screen](https://firebasestorage.googleapis.com/v0/b/restaurant-c1447.appspot.com/o/image_2024-06-21_162340541.png?alt=media&token=c9c0fa47-1eac-430e-9870-2c5ac205081c)
