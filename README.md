@@ -1,5 +1,11 @@
 # Flutter project to get food delivery
 
+## Login in app
+sanji78@gmail.com
+Sanji78!+
+
+OR create an account
+
 ## How to install project
 
 ### Prerequisites
