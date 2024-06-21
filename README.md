@@ -48,7 +48,7 @@ flutter run
 ![food details](https://firebasestorage.googleapis.com/v0/b/restaurant-c1447.appspot.com/o/image_2024-06-21_163945483.png?alt=media&token=afddda32-bc79-4bd6-a779-a67dbb808c1e)
 
 ## Cart
-[!cart](https://firebasestorage.googleapis.com/v0/b/restaurant-c1447.appspot.com/o/image_2024-06-21_164011660.png?alt=media&token=6d44cb8a-cf51-40cd-99f7-96932171aed4)
+![cart](https://firebasestorage.googleapis.com/v0/b/restaurant-c1447.appspot.com/o/image_2024-06-21_164011660.png?alt=media&token=6d44cb8a-cf51-40cd-99f7-96932171aed4)
 
 ## Payment screen
 ![Payment screen](https://firebasestorage.googleapis.com/v0/b/restaurant-c1447.appspot.com/o/image_2024-06-21_162340541.png?alt=media&token=c9c0fa47-1eac-430e-9870-2c5ac205081c)
