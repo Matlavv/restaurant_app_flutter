@@ -44,10 +44,13 @@ class _PaymentPageState extends State<PaymentPage> {
 
                     // approve button
                     TextButton(
-                        onPressed: () => Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                                builder: (context) => const HomePage())),
+                        onPressed: () => {
+                              Navigator.pop(context),
+                              Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (context) => const HomePage()))
+                            },
                         child: const Text("Valider"))
                   ]));
     }
